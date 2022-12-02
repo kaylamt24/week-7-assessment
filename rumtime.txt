@@ -1,0 +1,47 @@
+
+Results for the tinyArray 
+-   insert 40.5 μs .unshift()
+-   append 93.4 μs .push()
+
+
+
+Results for the smallArray 
+-   insert 39.1 μs .unshift()
+-   append 118.7 μs .push()
+
+-   insert 54.6 μs .unshift()
+-   append 103.4μs .push()
+
+
+
+Results for the mediumArray 
+-   insert insert 146.9 μs .unshift()
+-   append 144.9 μs .push()
+
+-   insert insert 139.9 μs .unshift()
+-   append 131.9 μs .push()
+
+
+
+Results for the largeArray 
+-   insert 7.9623 ms .unshift()
+-   append 895.9 μs .push()
+
+
+
+Results for the extraLargeArray 
+-   insert 869.5953 ms  .unshift()
+-   append 3.0521 ms .push()
+
+
+
+
+When the functions are smaller, they run much quicker and pretty similar. I was shocked when the smallArray had such a large difference when the mediumArray did not. I ran these both twice and to make sure I did not mess it up. 
+
+push - adds to the end of the array - this is quicker because it just adds to the end of the array without effecting the index of any information before it. 
+
+unshift - adds elements to the beginning of the array - this would take longer because it would need to change the index of each item in the array. It has to push everything back to let the new information go into the front. 
+
+
+
+
