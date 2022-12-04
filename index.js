@@ -60,11 +60,33 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-console.log(value)
+// console.log(value)
 
 
 
 //nested 4 loops are always 0(n^2)
+
+
+
+////////////////////////////////////////////////////// Joely's way of coding it. 
+
+let addToZero = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+          if (i !== j) {
+            if (arr[i] + arr[j] === 0) {
+                return true
+            }
+        }
+    }
+} 
+    return false
+}
+
+// console.log(addToZero([]));
+// console.log(addToZero([1]));
+// console.log(addToZero([1, 2, 3]));
+// console.log(addToZero([1, 2, 3, -2]));
 
 
 
@@ -88,7 +110,7 @@ console.log(value)
 
 let hasUniqueCharsOne = (input) => {
     let uniqueCharsOne = []
-      for(let i = 0; i < input.lenght; i++){
+      for(let i = 0; i < input.length; i++){
           if(input.indexOf(input[i]) === i){
              uniqueCharsOne.push(input[i])
                 // return true
@@ -99,34 +121,35 @@ let hasUniqueCharsOne = (input) => {
              return uniqueCharsOne.join('')
 
     }
-    console.log('help me')
+    // console.log('help me')
 
-    console.log(hasUniqueCharsOne('Monday'))
-    console.log('help me please')
+    // console.log(hasUniqueCharsOne('Monday'))
+    // console.log('help me please')
 
-    console.log(hasUniqueCharsOne('Mooooooooooonday'))
-    console.log('I do not understand why it is logging a blank line or undefined.')
+    // console.log(hasUniqueCharsOne('Mooooooooooonday'))
+    // console.log('I do not understand why it is logging a blank line or undefined.')
 
     // uniqueCharsOne('Monday')
     // console.log('help')
 
-    // hasUniqueCharsOne('Mooooonday')
+
     // console.log('help')
 
 
 
 
-// let hasUniqueChars = (input) => {
-//       for(let i = 0; i < input.lenght; i++){
-//         for(let j = 0; j < input.lengeth; i++){
-//           if(input[i] === input[j]){
-//                 return false
-//              } 
-//              }
+let hasUniqueChars = (input) => {
+      for(let i = 0; i < input.length; i++){
+        for(let j = i + 1; j < input.length; j++){
+          if(input[i] === input[j]){
+                return false
+             } 
+             }
+            //  console.log('////false')
 
-//     }
-//     return true
-// }
+    }
+   return true
+}
   
 
 
@@ -134,11 +157,8 @@ let hasUniqueCharsOne = (input) => {
 // //0(n^2) - nested for loop
 
 
-
-// hasUniqueChars('Monday')
-// hasUniqueChars('Mooonday')
-// console.log(hasUniqueChars('Monday'))
-// console.log(hasUniqueChars('Moooonday'))
+console.log(hasUniqueChars('Monday'))
+console.log(hasUniqueChars('Moooonday'))
 
 
 
@@ -178,6 +198,36 @@ let hasUniqueCharsOne = (input) => {
 // console.log()
 
 
+let isPangram = (input) => {
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split()
+    input = input.toLowerCase()
+
+   
+    for(let i = 0; i < alphabet.length; i++){
+        let letter = input[i]
+        let index = alphabet.indexOf(letter)
+        if (index !== -1){
+            alphabet.splice(index, 1)
+        }
+
+
+    }
+    if(alphabet.length === 0){
+        return true
+    } else {
+        return false
+    }
+}
+
+isPangram("The quick brown fox jumps over the lazy dog!");
+
+
+isPangram("I like cats, but not mice");
+
+
+
+// 0(n)
+
 
 
 
@@ -192,19 +242,29 @@ let hasUniqueCharsOne = (input) => {
 
 
 
-// let findLongestWord = (input) => {
-//     return input.length
-// }
+let findLongestWordOne = (arr) => {
+    let result = 0;
+    arr.forEach(words => {
+        if (words.length > result){
+            result = words.length
+        }
+    })
+    return word.length
+}
 
-// findLongestWord('Hello', 'Hi', 'supercalofra')
+findLongestWordOne('Hello', 'Hi', 'supercalofra')
 
 
 let findLongestWord = (input) => {
+    let biggest = 0
     for(let i = 0; i < input.length; i++){
-        if(input[i].length === findLongestWord){
-
-        } return true 
+        if(input[i].length > biggest){
+            biggest = input[i].length
+        } 
     } 
+    return biggest
 }
 
-findLongestWord('Hello', 'Hi', 'supercalofra')
+findLongestWord('Hello', 'Hi')
+
+// 0(n)
