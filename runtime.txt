@@ -36,15 +36,15 @@ Results for the extraLargeArray
 
 
 
-When the functions are smaller, they run much quicker and pretty similar. I was shocked when the smallArray had such a large difference when the mediumArray did not. I ran these both twice and to make sure I did not mess it up. Append gets quicker the larger the file. 
+When the functions are smaller, they run much quicker and pretty similar. I was shocked when the smallArray had such a large difference when the mediumArray did not. I ran these both twice and to make sure I did not mess it up. Append gets quicker the larger the file. When the array sizes are smaller, they run generall the same as far as speed goes. When it starts to get larger and larger, the runtime of unshift gets longer than push. 
 
 push - adds to the end of the array - this is quicker because it just adds to the end of the array without effecting the index of any information before it. 
 
-unshift - adds elements to the beginning of the array - this would take longer because it would need to change the index of each item in the array. It has to push everything back to let the new information go into the front. 
+unshift - adds elements to the beginning of the array - this would take longer because it would need to change the index of each item in the array. It has to push everything back to let the new information go into the front. Worse run time because of this. 
 
 
 
-
+Append and insert both have the runtime complexity of 0(n). 
 
 
 

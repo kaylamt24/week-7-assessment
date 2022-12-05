@@ -60,7 +60,7 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-// console.log(value)
+console.log(value)
 
 
 
@@ -85,8 +85,8 @@ let addToZero = (arr) => {
 
 // console.log(addToZero([]));
 // console.log(addToZero([1]));
-// console.log(addToZero([1, 2, 3]));
-// console.log(addToZero([1, 2, 3, -2]));
+console.log(addToZero([1, 2, 3]));
+console.log(addToZero([1, 2, 3, -2]));
 
 
 
@@ -242,29 +242,29 @@ isPangram("I like cats, but not mice");
 
 
 
-let findLongestWordOne = (arr) => {
-    let result = 0;
-    arr.forEach(words => {
-        if (words.length > result){
-            result = words.length
-        }
-    })
-    return word.length
-}
+// let findLongestWordOne = (arr) => {
+//     let result = 0;
+//     arr.forEach(words => {
+//         if (words.length > result){
+//             result = words.length
+//         }
+//     })
+//     return word.length
+// }
 
-findLongestWordOne('Hello', 'Hi', 'supercalofra')
+// findLongestWordOne('Hello', 'Hi', 'supercalofra')
 
 
-let findLongestWord = (input) => {
-    let biggest = 0
-    for(let i = 0; i < input.length; i++){
-        if(input[i].length > biggest){
-            biggest = input[i].length
-        } 
-    } 
-    return biggest
-}
+// let findLongestWord = (input) => {
+//     let biggest = 0
+//     for(let i = 0; i < input.length; i++){
+//         if(input[i].length > biggest){
+//             biggest = input[i].length
+//         } 
+//     } 
+//     return biggest
+// }
 
-findLongestWord('Hello', 'Hi')
+// findLongestWord('Hello', 'Hi')
 
 // 0(n)
